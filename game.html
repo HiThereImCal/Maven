@@ -2867,9 +2867,6 @@ const FX3 = (function() {
         scene.remove(obj.group);
         scene.remove(debris);
         scene.remove(fire);
-        // ←←← THIS IS THE FIX
-        const index = activeObjects.indexOf(obj);
-        if (index > -1) activeObjects.splice(index, 1);
         return true;
       }
       return false;
@@ -2989,8 +2986,6 @@ const FX3 = (function() {
       if (k >= 0.9) {
         scene.remove(obj.group);
         scene.remove(embers);
-	const index = activeObjects.indexOf(obj);
-      	if (index > -1) activeObjects.splice(index, 1);
         return true;
       }
       return false;
