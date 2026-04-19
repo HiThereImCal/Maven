@@ -2879,7 +2879,7 @@ const FX3 = (function() {
       tickParticles(debris, dt, 80);
       tickParticles(fire, dt, -30);
 
-      if (k >= 0.9) {
+      if (k >= 1) {
         console.info('clearing as timer completed')
         scene.remove(obj.group);
         scene.remove(debris);
@@ -3003,7 +3003,7 @@ const FX3 = (function() {
       }
       tickParticles(embers, dt, -20);
 
-      if (k >= 0.9) {
+      if (k >= 1) {
         scene.remove(obj.group);
         scene.remove(embers);
         return true;
